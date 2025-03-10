@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center; size: +500;">Contact Fahad</h1>
+    <p style="text-align: center;">Feel free to reach out.</p>
+    <hr>
+    <section class="contact-container">
+        <form action="submit-form.php" method="POST">
+            <table>
+                <div>
+                    <tr><b>Contact Form</b></tr>
+                    <tr>
+                        <td><input type="text" id="name" name="name" placeholder="Enter Name" required></td>
+
+                        <td><input type="email" id="email" name="email" placeholder="Enter Email" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea id="message" name="message" rows="5" cols="46"
+                                placeholder="Your Message" spellcheck="true" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                             <button type="button" >Send Message
+                             </button>
+                        </td>
+                    </tr>
+                </div>
+            </table>
+        </form>
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p>📧 <a href="mailto:fahadalvi615@gmail.com" target="_blank">fahadalvi615@gmail.com</a></p>
+            <p>📞 +923116215338</p>
+            <p>🔗 <a href="www.linkedin.com/in/muhammad-fahad-alvi-ab6915302" target="_blank">Muhammad Fahad Alvi</a></p>
+        </div>
+    </section>
+    <script>
+        document.getElementById("contact-form").addEventListener("button", function (event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !message) {
+                alert("All fields are required!");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
